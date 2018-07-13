@@ -1,0 +1,7 @@
+我们自定义一个ClassLoaser，名为 MyClassLoader，默认加载路径为D:\javaee\ClassLoaderTest下的jar包和资源。
+
+1）我们写编写一个测试用的类文件，Test.java，然后将它编译为class文件ClassLoaderTest.class放到ClassLoaderTest这个路径下。
+2）我们编写加载器 MyClassLoader的代码,在这个类里需要做的事情是：
+	重写它的findClass()方法。
+	在findClass()方法中调用defineClass()。
+3）测试，用自定义的加载器加载我们编写的测试类
